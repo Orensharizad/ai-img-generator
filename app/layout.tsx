@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import PromptInput from '@/components/PromptInput'
 import '../styles/global.css'
 
 export const metadata = {
@@ -13,6 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
+        <PromptInput />
         {/* Header */}
         {/* Input */}
 
