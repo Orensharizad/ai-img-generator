@@ -1,6 +1,12 @@
 export async function GET(request: Request) {
 
-    const res = await fetch('http://localhost:7071/api/getChatGPTSuggestion', {
+
+    const BASE_URL = process.env.NODE_ENV === 'production'
+        ? process.env.GET_SUGGESTION!
+        : 'http://localhost:7071/api/getChatGPTSuggestion'
+
+
+    const res = await fetch(BASE_URL, {
         cache: 'no-store'
     })
 
